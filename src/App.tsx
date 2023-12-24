@@ -31,11 +31,11 @@ const formTemplate: FormFields = {
 const App = () => {
   const [data, setData] = useState(formTemplate)
 
-  const updateFieldHandler = (key: String, value: string) => {
+  const updateFieldHandler = (key: string, value: string) => {
     setData((prev) => {
       return { ...prev, [key]: value };
-    })
-  }
+    });
+  };
 
   const formComponents = [
     <UserForm data={data} updateFieldHandler={updateFieldHandler} />,
